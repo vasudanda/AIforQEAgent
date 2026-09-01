@@ -1,0 +1,93 @@
+<testsuites id="" name="" tests="6" failures="1" skipped="0" errors="0" time="28.358282">
+<testsuite name="tests\web\home-page.spec.ts" timestamp="2026-08-31T03:41:20.895Z" hostname="web" tests="6" failures="1" skipped="0" time="19.518" errors="0">
+<testcase name="anonymous visitor sees welcome heading and empty cart and wishlist" classname="tests\web\home-page.spec.ts" time="7.738">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web\error-context.md]]
+
+[[ATTACHMENT|..\test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web-retry1\error-context.md]]
+
+[[ATTACHMENT|..\test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web-retry1\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toContainText(expected) failed" type="expect.toContainText">
+<![CDATA[  [web] › tests\web\home-page.spec.ts:10:5 › anonymous visitor sees welcome heading and empty cart and wishlist 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('link', { name: /Shopping cart/ })
+    Expected substring: "(0)"
+    Error: strict mode violation: getByRole('link', { name: /Shopping cart/ }) resolved to 2 elements:
+        1) <a href="/cart" class="ico-cart">…</a> aka getByRole('link', { name: 'Shopping cart (0)' })
+        2) <a href="/cart" class="ico-cart">Shopping cart</a> aka getByRole('link', { name: 'Shopping cart', exact: true })
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByRole('link', { name: /Shopping cart/ })
+
+
+       at pages\HomePage.ts:13
+
+      11 |   async expectAnonymousState() {
+      12 |     await expect(this.page.getByRole('heading', { name: 'Welcome to our store' })).toBeVisible();
+    > 13 |     await expect(this.page.getByRole('link', { name: /Shopping cart/ })).toContainText('(0)');
+         |                                                                          ^
+      14 |     await expect(this.page.getByRole('link', { name: /Wishlist/ })).toContainText('(0)');
+      15 |   }
+      16 |
+        at HomePage.expectAnonymousState (C:\Users\vasud\OneDrive - Rpapowerautomate\Desktop\AIforQE\pages\HomePage.ts:13:74)
+        at C:\Users\vasud\OneDrive - Rpapowerautomate\Desktop\AIforQE\tests\web\home-page.spec.ts:13:3
+
+    Error Context: test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web\error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('link', { name: /Shopping cart/ })
+    Expected substring: "(0)"
+    Error: strict mode violation: getByRole('link', { name: /Shopping cart/ }) resolved to 2 elements:
+        1) <a href="/cart" class="ico-cart">…</a> aka getByRole('link', { name: 'Shopping cart (0)' })
+        2) <a href="/cart" class="ico-cart">Shopping cart</a> aka getByRole('link', { name: 'Shopping cart', exact: true })
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByRole('link', { name: /Shopping cart/ })
+
+
+       at pages\HomePage.ts:13
+
+      11 |   async expectAnonymousState() {
+      12 |     await expect(this.page.getByRole('heading', { name: 'Welcome to our store' })).toBeVisible();
+    > 13 |     await expect(this.page.getByRole('link', { name: /Shopping cart/ })).toContainText('(0)');
+         |                                                                          ^
+      14 |     await expect(this.page.getByRole('link', { name: /Wishlist/ })).toContainText('(0)');
+      15 |   }
+      16 |
+        at HomePage.expectAnonymousState (C:\Users\vasud\OneDrive - Rpapowerautomate\Desktop\AIforQE\pages\HomePage.ts:13:74)
+        at C:\Users\vasud\OneDrive - Rpapowerautomate\Desktop\AIforQE\tests\web\home-page.spec.ts:13:3
+
+    Error Context: test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web-retry1\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\home-page-anonymous-visito-64cf9-and-empty-cart-and-wishlist-web-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="anonymous visitor can browse from the home page to Books" classname="tests\web\home-page.spec.ts" time="3.157">
+</testcase>
+<testcase name="header shows Register and Log in links for anonymous visitor" classname="tests\web\home-page.spec.ts" time="2.164">
+</testcase>
+<testcase name="all top-level category links are present in the navigation" classname="tests\web\home-page.spec.ts" time="2.209">
+</testcase>
+<testcase name="home page displays featured product cards with Add to cart buttons" classname="tests\web\home-page.spec.ts" time="2.129">
+</testcase>
+<testcase name="newsletter subscribe input accepts an email address" classname="tests\web\home-page.spec.ts" time="2.121">
+</testcase>
+</testsuite>
+</testsuites>

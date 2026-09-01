@@ -1,0 +1,11 @@
+{
+  "name": "ai-for-qe",
+  "private": true,
+  "scripts": {
+    "agents:update": "playwright init-agents --loop=vscode && bash scripts/absorb.sh"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "xlsx": "^0.18.5"
+  }
+}
